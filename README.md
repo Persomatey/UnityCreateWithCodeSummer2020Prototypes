@@ -21,7 +21,8 @@ I did the <b>Easy</b>, <b>Medium</b>, <b>Medium</b>, and <b>Expert</b> bonus fea
 
 Optional Challenge 2 |
 -------------------- |
-<i>I have yet to do the optional challenge for this prototype. </i> |
+A sideview ball-catching game where the player strategically spawns dogs to catch balls that fall from the sky. | 
+<i> I fixed all 8 parts of this optional challenge </i> |
 
 Prototype 3 |
 ----------- |
