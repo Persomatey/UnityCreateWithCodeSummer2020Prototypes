@@ -2,7 +2,7 @@
 
 Using this repository to store the prototypes made during Unity's Create With Code: Summer 2020 course
 
-Prototype 1 |
+## Prototype 1 |
 ----------- |
 content |
 
