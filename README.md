@@ -10,7 +10,7 @@ I did the <b>Easy</b>, <b>Medium</b>, <b>Hard</b>, and <b>Expert</b> bonus featu
 
 Optional Challenge 1 |
 -------------------- |
-I did the optional challenge to fix the bugs in the auto flying game as well. A Simpple sideview flying game where the player controls the plane and is able to fly throught the obstacle course. |
+A Simple sideview flying game where the player controls the plane and is able to fly throught the obstacle course. |
 <i>I fixed all 8 parts of this optional challenge. </i> |
 
 Prototype 2 |
@@ -26,12 +26,12 @@ Optional Challenge 2 |
 Prototype 3 |
 ----------- |
 This is a simple sidescrolling infinite autorunner where the player can only control jumping over obstacles they are running towards. |
-I did the <b>Easy</b> and <b>Medium</b> bonus challenges. for th e prototype. I have yet to do the <b>Hard</b> and <b>Expert</b> bonus challenges. |
-<i> Aditionally, I added a a feature where it shows the player score. The score increases by 10 each time the player jumps over an obstacle. </i>|
+I did the <b>Easy</b> and <b>Medium</b> bonus challenges. for the prototype. I have yet to do the <b>Hard</b> and <b>Expert</b> bonus challenges. |
+<i> Aditionally, I added a feature where it shows the player score. The score increases by 10 each time the player jumps over an obstacle. </i>|
 
 Optional Challenge 3 |
 -------------------- |
-I did the optional challenge to fix the bugs in the sidescrolling balloon jumper where the player holds down the spacebar to make a balloon float higher to dodge bombs or collect money. |
+A sidescrolling balloon jumper where the player holds down the spacebar to make a balloon float higher to dodge bombs or collect money. |
 <i>I fixed 6 out of the 8 parts of this optional challenge. </i> |
 
 Prototype 4 | 
