@@ -5,13 +5,9 @@ Using this repository to store the prototypes made during Unity's Create With Co
 Prototype 1 |
 ----------- |
 content |
-
 This is a simple third person driving prototype where two players are able to move their cars around an obstacle course. |
-
 I did the <b>Easy</b>, <b>Medium</b>, <b>Hard</b>, and <b>Expert</b> bonus features for the prototype. |
-
 <i>Additionally, I also added a feature at the end of the obstacle course where the cars do a jump at the end and the player loses control of the car. </i> |
-
 
 ### Optional Challenge 1 
 
