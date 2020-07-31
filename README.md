@@ -36,8 +36,8 @@ I did the optional challenge to fix the bugs in the sidescrolling balloon jumper
 
 Prototype 4 | 
 ----------- |
-<i>Locked... </i> |
+<i>In progress... </i> |
 
 Optional Challenge 4 |
 -------------------- |
-<i>Locked... </i> |
+<i>In progress... </i> |
