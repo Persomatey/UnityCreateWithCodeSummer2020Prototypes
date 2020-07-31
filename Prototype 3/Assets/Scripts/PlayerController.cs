@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody playerRB;
+    private Rigidbody playerRb;
     private Animator playerAnim;
     public ParticleSystem explPart;
     public ParticleSystem dirtPart;
@@ -16,21 +16,36 @@ public class PlayerController : MonoBehaviour
     public float gravityModifier;
     public bool canSingleJump = true;
     public bool canDoubleJump = false; 
-    public bool gameOver; 
+    public bool gameOver;
+    private bool didOnce; 
 
     void Start()
     {
-        playerRB = GetComponent<Rigidbody>();
+        playerRb = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
         playerAudio = GetComponent<AudioSource>(); 
-        Physics.gravity *= gravityModifier; 
+        Physics.gravity *= gravityModifier;
+
+        playerAnim.SetFloat("Speed_f", 0.26f);
+        gameOver = true;
     }
 
     void Update()
     {
-        if( Input.GetKeyDown(KeyCode.Space) && canSingleJump && !canDoubleJump && !gameOver)
+        if (transform.position.x < 0)
         {
-            playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            transform.Translate(Vector3.forward * Time.deltaTime * 5.0f);
+        }
+        else if ( transform.position.x >= 0 && !didOnce)
+        {
+            playerAnim.SetFloat("Speed_f", 5.0f);
+            gameOver = false;
+            didOnce = true; 
+        }
+
+        if ( Input.GetKeyDown(KeyCode.Space) && canSingleJump && !canDoubleJump && !gameOver)
+        {
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             playerAnim.SetTrigger("Jump_trig");
             canSingleJump = false;
             canDoubleJump = true; 
@@ -39,12 +54,26 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Space) && !canSingleJump && canDoubleJump && !gameOver)
         {
-            playerRB.velocity = Vector3.zero;
-            playerRB.angularVelocity = Vector3.zero;
-            playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            playerRb.velocity = Vector3.zero;
+            playerRb.angularVelocity = Vector3.zero;
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             playerAnim.SetTrigger("Jump_trig");
             canDoubleJump = false;
             playerAudio.PlayOneShot(jumpSound, 0.8f);
+        }
+
+        if( Input.GetKey(KeyCode.B) && !gameOver)
+        {
+            playerAnim.SetFloat("Speed_Modifier", 2.0f);
+        }
+        else if ( !Input.GetKey(KeyCode.B) && !gameOver)
+        {
+            playerAnim.SetFloat("Speed_Modifier", 1.0f);
+        }
+
+        if(gameOver)
+        {
+            dirtPart.Stop();
         }
     }
 
@@ -71,11 +100,17 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.CompareTag("Obstacle"))
+        if (col.gameObject.CompareTag("Obstacle") && !Input.GetKey(KeyCode.B))
         {
-            Debug.Log("<color=green>Point!</color>");
+            Debug.Log("<color=yellow>Points!</color>");
 
             GameObject.Find("GameManager").GetComponent<GameManager>().score += 10; 
+        }
+        else if (col.gameObject.CompareTag("Obstacle") && Input.GetKey(KeyCode.B))
+        {
+            Debug.Log("<color=green>Bonus Points!</color>");
+
+            GameObject.Find("GameManager").GetComponent<GameManager>().score += 20;
         }
     }
 }

@@ -16,6 +16,7 @@ public class PlayerControllerX : MonoBehaviour
     private AudioSource playerAudio;
     public AudioClip moneySound;
     public AudioClip explodeSound;
+    public AudioClip tooFarSound; 
 
 
     void Start()
@@ -42,7 +43,9 @@ public class PlayerControllerX : MonoBehaviour
         {
             playerRb.velocity = Vector3.zero;
             playerRb.angularVelocity = Vector3.zero;
-            transform.position = new Vector3(transform.position.x, 14.5f, transform.position.z); 
+            transform.position = new Vector3(transform.position.x, 14.5f, transform.position.z);
+            playerRb.AddForce(Vector3.down * 350);
+            playerAudio.PlayOneShot(tooFarSound, 1.0f);
         }
 
         if (transform.position.y < 1.5f)
@@ -50,6 +53,8 @@ public class PlayerControllerX : MonoBehaviour
             playerRb.velocity = Vector3.zero;
             playerRb.angularVelocity = Vector3.zero;
             transform.position = new Vector3(transform.position.x, 1.5f, transform.position.z);
+            playerRb.AddForce(Vector3.up * 350);
+            playerAudio.PlayOneShot(tooFarSound, 1.0f);
         }
     }
 
@@ -71,9 +76,6 @@ public class PlayerControllerX : MonoBehaviour
             fireworksParticle.Play();
             playerAudio.PlayOneShot(moneySound, 1.0f);
             Destroy(other.gameObject);
-
         }
-
     }
-
 }

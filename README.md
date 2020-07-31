@@ -27,13 +27,13 @@ A sideview ball-catching game where the player strategically spawns dogs to catc
 Prototype 3 |
 ----------- |
 This is a simple sidescrolling infinite autorunner where the player can only control jumping over obstacles they are running towards. |
-I did the <b>Easy</b> and <b>Medium</b> bonus challenges. for the prototype. I have yet to do the <b>Hard</b> and <b>Expert</b> bonus challenges. |
+I did the <b>Easy</b>, <b>Medium</b>, <b>Medium</b>, and <b>Expert</b> bonus features for the prototype. |
 <i> Aditionally, I added a feature where it shows the player score. The score increases by 10 each time the player jumps over an obstacle. </i>|
 
 Optional Challenge 3 |
 -------------------- |
 A sidescrolling balloon jumper where the player holds down the spacebar to make a balloon float higher to dodge bombs or collect money. |
-<i>I fixed 6 out of the 8 parts of this optional challenge. </i> |
+<i> I fixed all 8 parts of this optional challenge </i> |
 
 Prototype 4 | 
 ----------- |
