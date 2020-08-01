@@ -28,17 +28,15 @@ Prototype 3 |
 ----------- |
 This is a simple sidescrolling infinite autorunner where the player can only control jumping over obstacles they are running towards. |
 I did the <b>Easy</b>, <b>Medium</b>, <b>Medium</b>, and <b>Expert</b> bonus features for the prototype. |
-<i> Aditionally, I added a feature where it shows the player score. The score increases by 10 each time the player jumps over an obstacle. </i>|
+<i> Aditionally, I added a feature where it shows the player score. The score increases by 10 each time the player jumps over an obstacle (20 if holding B to for the "super speed" ability") </i>|
 
 Optional Challenge 3 |
 -------------------- |
 A sidescrolling balloon jumper where the player holds down the spacebar to make a balloon float higher to dodge bombs or collect money. |
 <i> I fixed all 8 parts of this optional challenge </i> |
 
-Prototype 4 | 
+Prototype 4 (Veggierena)| 
 ----------- |
-<i>In progress... </i> |
-
-Optional Challenge 4 |
--------------------- |
-<i>In progress... </i> |
+A top-down Zelda-like arena fighter where the player controls a tomatoe and fights off hoards of veggies | 
+https://docs.google.com/document/d/1x6qP_hiF3EEe25by6niOt32D_yAkATl_Nrew-UtOKMc/edit?usp=sharing | 
+<i>In progress... </i> | 
