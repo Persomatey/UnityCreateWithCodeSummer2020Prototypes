@@ -10,31 +10,51 @@ public class EnemySpawner : MonoBehaviour
     public float startDelay;
     public float spawnDelay;
 
-    Vector3 NorthSpawnLoc;
-    Vector3 SouthSpawnLoc;
-    Vector3 WestSpawnLoc;
-    Vector3 EastSpawnLoc; 
+    private int spawn1Ago;
+    private int spawn2Ago;
+    private int enemIndex; 
 
     void Start()
     {
-        InvokeRepeating("SpawnEnemy", startDelay, spawnDelay); 
+        InvokeRepeating("SpawnEnemy", startDelay, spawnDelay);
+        spawn1Ago = 5;
+        spawn2Ago = 6; 
     }
 
     void SpawnEnemy()
     {
-        int enemIndex = Random.Range(0, enemies.Length);
-        int locationIndex = Random.Range(0, spawnLocs.Length);
-
-        Debug.Log("Spawning a " + enemies[enemIndex] + " at " + spawnLocs[locationIndex]);
-
-        GameObject newEnemy = Instantiate(enemies[enemIndex], spawnLocs[locationIndex], enemies[enemIndex].transform.rotation);
-
-        switch (locationIndex)
+        if (!GameObject.Find("Player").GetComponent<PlayerController>().deathState)
         {
-            case 0: newEnemy.GetComponent<EnemyController>().north = true; break;
-            case 1: newEnemy.GetComponent<EnemyController>().south = true; break;
-            case 2: newEnemy.GetComponent<EnemyController>().east = true; break;
-            case 3: newEnemy.GetComponent<EnemyController>().west = true; break;
+            int locationIndex = Random.Range(0, spawnLocs.Length);
+
+            spawn2Ago = spawn1Ago;
+            spawn1Ago = enemIndex;
+            enemIndex = Random.Range(0, enemies.Length);
+
+            if (spawn1Ago == spawn2Ago && enemIndex == spawn1Ago)
+            {
+                Debug.Log("Too many " + enemies[enemIndex] + " in a row. Changing index. ");
+                if (enemIndex < 2)
+                {
+                    enemIndex++;
+                }
+                else
+                {
+                    enemIndex--;
+                }
+            }
+
+            Debug.Log("Spawning a " + enemies[enemIndex] + " at " + spawnLocs[locationIndex]);
+
+            GameObject newEnemy = Instantiate(enemies[enemIndex], spawnLocs[locationIndex], enemies[enemIndex].transform.rotation);
+
+            switch (locationIndex)
+            {
+                case 0: newEnemy.GetComponent<EnemyController>().northB = true; break;
+                case 1: newEnemy.GetComponent<EnemyController>().southB = true; break;
+                case 2: newEnemy.GetComponent<EnemyController>().eastB = true; break;
+                case 3: newEnemy.GetComponent<EnemyController>().westB = true; break;
+            }
         }
     }
 }
