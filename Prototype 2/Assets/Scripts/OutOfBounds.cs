@@ -22,6 +22,8 @@ public class OutOfBounds : MonoBehaviour
     {
         if (transform.position.x > lowerBound)
         {
+            GameObject obj = gameObject.GetComponent<AnimalHealth>().bar; 
+            Destroy(obj); 
             Destroy(gameObject);
 
             GameObject.Find("Player").GetComponent<PlayerController>().DecrementHealth();
