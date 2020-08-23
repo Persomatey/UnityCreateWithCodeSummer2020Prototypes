@@ -35,6 +35,10 @@ Optional Challenge 3 |
 A sidescrolling balloon jumper where the player holds down the spacebar to make a balloon float higher to dodge bombs or collect money. |
 <i> I fixed all 8 parts of this optional challenge </i> |
 
+Prototype 4 |
+----------- |
+A top down sumo-like game where the player controls a ball and has to knock waves of enemy balls off the platform | 
+
 Prototype 4 (Veggierena)| 
 ----------- |
 A top-down Zelda-like arena fighter where the player controls a tomatoe and fights off hoards of veggies | 
