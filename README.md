@@ -10,7 +10,7 @@ I did the <b>Easy</b>, <b>Medium</b>, <b>Hard</b>, and <b>Expert</b> bonus featu
 
 Optional Challenge 1 |
 -------------------- |
-A Simple sideview flying game where the player controls the plane using the up and down arrow keys to fly throught the obstacle course. |
+A Simple sideview flying game where the player controls the plane using the up and down arrow keys to navigate throught the obstacle course. |
 <i>I fixed all 8 parts of this optional challenge. </i> |
 
 Prototype 2 |
