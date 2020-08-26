@@ -37,7 +37,7 @@ A sidescrolling balloon jumper where the player holds down the spacebar to make 
 
 Prototype 4 |
 ----------- |
-A top down sumo-like game where the player controls a ball and has to knock increasingly difficult endless waves of enemies of enemy balls off the platform | 
+A top down sumo-like game where the player controls a ball and has to knock increasingly difficult endless waves of enemies of enemy balls off the platform. | 
 I am having trouble finding the <b>Easy</b>, <b>Medium</b>, <b>Medium</b>, and <b>Expert</b> bonus features for the prototype... | 
 
 Optional Challenge 4 |
@@ -46,6 +46,6 @@ Optional Challenge 4 |
 
 Personal Project (Veggierena)| 
 ----------- |
-A top-down Zelda-like arena fighter where the player controls a tomatoe and fights off increasingly difficult endless waves of vegitables. | 
+A top-down Zelda-like arena fighter where the player controls a tomatoe and fights off increasingly difficult endless waves of vegitables by chopping them up. | 
 https://docs.google.com/document/d/1x6qP_hiF3EEe25by6niOt32D_yAkATl_Nrew-UtOKMc/edit?usp=sharing | 
 <i>In progress... </i> | 
