@@ -1,8 +1,6 @@
 ### Unity Create With Code Summer 2020 Prototypes
 <i> Using this repository to store the prototypes made during Unity's Create With Code: Summer 2020 course </i> 
 
----
-
 Prototype 1 |
 ----------- |
 This is a simple third person driving prototype where two players are able to move their cars around an obstacle course. |
