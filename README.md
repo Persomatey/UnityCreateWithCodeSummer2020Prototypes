@@ -21,7 +21,7 @@ I did the <b>Easy</b>, <b>Medium</b>, <b>Medium</b>, and <b>Expert</b> bonus fea
 
 Optional Challenge 2 |
 -------------------- |
-A sideview ball-catching game where the player strategically spawns dogs that run to catch balls that fall from the sky. | 
+A sideview ball-catching game where the player strategically spawns dogs that run to catch balls that continuously fall from specific locations in the sky. | 
 <i> I fixed all 8 parts of this optional challenge </i> |
 
 Prototype 3 |
