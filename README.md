@@ -1,4 +1,4 @@
-### Unity Create With Code Summer 2020 Prototypes
+# Unity Create With Code Summer 2020 Prototypes
 <i> Using this repository to store the prototypes made during Unity's Create With Code: Summer 2020 course </i> 
 
 ---
