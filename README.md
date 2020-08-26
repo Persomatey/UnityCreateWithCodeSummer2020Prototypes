@@ -54,10 +54,10 @@ https://docs.google.com/document/d/1x6qP_hiF3EEe25by6niOt32D_yAkATl_Nrew-UtOKMc/
 - ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `#c5f015`
 - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `#1589F0`
 
-```diff
+
 - text in red
 + text in green
 ! text in orange
 # text in gray
 @@ text in purple (and bold)@@
-```
+
