@@ -49,3 +49,7 @@ Personal Project (Veggierena)|
 A top-down Zelda-like arena fighter where the player controls a tomatoe and fights off increasingly difficult endless waves of vegitables by chopping them up. | 
 https://docs.google.com/document/d/1x6qP_hiF3EEe25by6niOt32D_yAkATl_Nrew-UtOKMc/edit?usp=sharing | 
 <i>In progress... </i> | 
+
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `#f03c15`
+- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `#c5f015`
+- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `#1589F0`
