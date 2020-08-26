@@ -46,6 +46,6 @@ Optional Challenge 4 |
 
 Personal Project (Veggierena)| 
 ----------- |
-A top-down Zelda-like arena fighter where the player controls a tomatoe and fights off increasingly difficult endless waves of vegitables | 
+A top-down Zelda-like arena fighter where the player controls a tomatoe and fights off increasingly difficult endless waves of vegitables. | 
 https://docs.google.com/document/d/1x6qP_hiF3EEe25by6niOt32D_yAkATl_Nrew-UtOKMc/edit?usp=sharing | 
 <i>In progress... </i> | 
