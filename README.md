@@ -37,7 +37,7 @@ A sidescrolling balloon jumper where the player holds down the spacebar to make 
 
 Prototype 4 |
 ----------- |
-A top down sumo-like game where the player controls a ball and has to knock waves of enemy balls off the platform | 
+A top down sumo-like game where the player controls a ball and has to knock waves of increasing enemies of enemy balls off the platform | 
 I am having trouble finding the <b>Easy</b>, <b>Medium</b>, <b>Medium</b>, and <b>Expert</b> bonus features for the prototype... | 
 
 Optional Challenge 4 |
