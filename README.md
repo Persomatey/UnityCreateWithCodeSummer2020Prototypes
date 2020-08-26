@@ -10,7 +10,7 @@ I did the <b>Easy</b>, <b>Medium</b>, <b>Hard</b>, and <b>Expert</b> bonus featu
 
 Optional Challenge 1 |
 -------------------- |
-A Simple sideview flying game where the player controls the plane and is able to fly throught the obstacle course. |
+A Simple sideview flying game where the player controls the plane using the up and down arrow keys to fly throught the obstacle course. |
 <i>I fixed all 8 parts of this optional challenge. </i> |
 
 Prototype 2 |
@@ -21,7 +21,7 @@ I did the <b>Easy</b>, <b>Medium</b>, <b>Medium</b>, and <b>Expert</b> bonus fea
 
 Optional Challenge 2 |
 -------------------- |
-A sideview ball-catching game where the player strategically spawns dogs to catch balls that fall from the sky. | 
+A sideview ball-catching game where the player strategically spawns dogs that run to catch balls that fall from the sky. | 
 <i> I fixed all 8 parts of this optional challenge </i> |
 
 Prototype 3 |
