@@ -9,7 +9,7 @@ public class SpawnManager : MonoBehaviour
 
     private float spawnRange = 9.0f;
     private int enemyCount;
-    private int waveNum; 
+    public int waveNum; 
 
     void Start()
     {
