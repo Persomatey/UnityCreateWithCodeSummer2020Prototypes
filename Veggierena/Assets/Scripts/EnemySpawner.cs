@@ -46,14 +46,34 @@ public class EnemySpawner : MonoBehaviour
 
             Debug.Log("Spawning a " + enemies[enemIndex] + " at " + spawnLocs[locationIndex]);
 
-            GameObject newEnemy = Instantiate(enemies[enemIndex], spawnLocs[locationIndex], enemies[enemIndex].transform.rotation);
+            GameObject newEnemy = Instantiate(enemies[enemIndex], new Vector3(spawnLocs[locationIndex].x, enemies[enemIndex].transform.position.y, spawnLocs[locationIndex].z), enemies[enemIndex].transform.rotation);
 
             switch (locationIndex)
             {
-                case 0: newEnemy.GetComponent<EnemyController>().northB = true; break;
-                case 1: newEnemy.GetComponent<EnemyController>().southB = true; break;
-                case 2: newEnemy.GetComponent<EnemyController>().eastB = true; break;
-                case 3: newEnemy.GetComponent<EnemyController>().westB = true; break;
+                case 0:
+                    if (newEnemy.name == "PeaStalk(Clone)")
+                    { newEnemy.GetComponent<EnemyPeaController>().northB = true; }
+                    else
+                    { newEnemy.GetComponent<EnemyController>().northB = true; }
+                    break;
+                case 1:
+                    if (newEnemy.name == "PeaStalk(Clone)")
+                    { newEnemy.GetComponent<EnemyPeaController>().southB = true; }
+                    else
+                    { newEnemy.GetComponent<EnemyController>().southB = true; }
+                    break;
+                case 2:
+                    if (newEnemy.name == "PeaStalk(Clone)")
+                    { newEnemy.GetComponent<EnemyPeaController>().eastB = true; }
+                    else
+                    { newEnemy.GetComponent<EnemyController>().eastB = true; }
+                    break;
+                case 3:
+                    if (newEnemy.name == "PeaStalk(Clone)")
+                    { newEnemy.GetComponent<EnemyPeaController>().westB = true; }
+                    else
+                    { newEnemy.GetComponent<EnemyController>().westB = true; }
+                    break;
             }
         }
     }

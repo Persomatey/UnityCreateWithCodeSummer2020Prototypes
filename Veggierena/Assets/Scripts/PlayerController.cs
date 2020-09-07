@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public GameObject attackWest;
     public GameObject attackEast;
 
+    public GameObject partSystem; 
+
     public GameObject attackStick;
 
     public GameObject deathScreen1;
@@ -223,7 +225,6 @@ public class PlayerController : MonoBehaviour
         if ( Input.GetKeyDown(KeyCode.Space) && !isAttacking)
         {
             source.PlayOneShot(swingSFX, 1.0f); 
-            Vector3 attackLoc;
             isAttacking = true; 
             Invoke("AllowPlayer", 0.1f);
 
@@ -422,6 +423,13 @@ public class PlayerController : MonoBehaviour
     {
         health -= dam;
         source.PlayOneShot(hitSFX, 1.0f);
+        partSystem.SetActive(true);
+        Invoke("DeactivatePart", 0.25f); 
+    }
+
+    void DeactivatePart()
+    {
+        partSystem.SetActive(false);
     }
 
     public void HealHealth(int add)

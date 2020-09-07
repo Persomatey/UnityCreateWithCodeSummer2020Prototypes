@@ -10,11 +10,14 @@ public class EnemyController : MonoBehaviour
     Vector3 enemyPos;
     Vector3 nextPos;
 
+    public GameObject partSystem; 
+
     private AudioSource source;
     public AudioClip hitSFX;
-    public AudioClip dyingSFX; 
+    public AudioClip dyingSFX;
 
-    public int health;
+    public int maxHealth; 
+    public int curHealth;
     public float speed; 
     public bool wasHit;
 
@@ -30,13 +33,22 @@ public class EnemyController : MonoBehaviour
     private bool isDead;
 
     public GameObject healthPickup;
-    public GameObject atkPickup; 
+    public GameObject atkPickup;
+
+    public Transform bar;
+    public GameObject barPrefab; 
+
+    private float curFloat;
+    private float maxFloat; 
+    public float healthPer;
+
+    public float activationTime; 
 
     void Start()
     {
         source = GetComponent<AudioSource>(); 
         playerObj = GameObject.Find("Player");
-        Invoke("ActivateEnemy", 1.5f); 
+        Invoke("ActivateEnemy", activationTime); 
     }
 
     void Update()
@@ -74,7 +86,7 @@ public class EnemyController : MonoBehaviour
             transform.position = Vector3.MoveTowards(enemyPos, nextPos, Time.deltaTime * speed); 
         }
 
-        if (health <= 0)
+        if (curHealth <= 0)
         {
             if (!increaseKillsOnce)
             {
@@ -95,6 +107,24 @@ public class EnemyController : MonoBehaviour
                 Invoke("DelayedKill", 0.5f); 
             }
         }
+
+        if (curHealth < 0)
+        {
+            curHealth = 0; 
+        }
+
+        if (active)
+        {
+            curFloat = curHealth;
+            maxFloat = maxHealth;
+            healthPer = curFloat / maxFloat;
+            SetBarSize(healthPer);
+        }
+    }
+
+    void SetBarSize(float sizeNormalized)
+    {
+        bar.localScale = new Vector3(sizeNormalized, 1f); 
     }
 
     void DelayedKill()
@@ -116,15 +146,24 @@ public class EnemyController : MonoBehaviour
 
     void ActivateEnemy()
     {
-        active = true; 
+        active = true;
+        Instantiate( barPrefab, new Vector3(transform.position.x, barPrefab.transform.position.y, transform.position.z), barPrefab.transform.rotation, transform );
+        bar = transform.GetChild(2).GetChild(2); 
     }
 
     public void DamageEnemy(int dam)
     {
-        source.PlayOneShot(hitSFX, 1.0f); 
-        health -= dam;
+        source.PlayOneShot(hitSFX, 1.0f);
+        curHealth -= dam;
         wasHit = true;
-        Invoke("ResetBool", 0.2f); 
+        Invoke("ResetBool", 0.2f);
+        partSystem.SetActive(true);
+        Invoke("DeactivatePart", 0.25f);
+    }
+
+    void DeactivatePart()
+    {
+        partSystem.SetActive(false);
     }
 
     void ResetBool()
@@ -154,14 +193,13 @@ public class EnemyController : MonoBehaviour
 
     public void PushEnemy(Vector3 direction)
     {
-        //StartCoroutine(Please(direction));
+        Debug.Log("Pushed!"); 
         GetComponent<Rigidbody>().AddForce(direction * 200);
         Invoke("StopVelocity", 0.2f);
     }
 
     public void StopVelocity()
     {
-        Debug.Log("Stopping Velocity");
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
     }

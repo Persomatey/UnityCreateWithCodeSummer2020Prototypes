@@ -31,12 +31,22 @@ public class DamageEnemy : MonoBehaviour
         if(col.tag == "Enemy" && isActive)
         {
             int dam = damage * modifier;
-            Debug.Log("ENEMY! Doing " + dam + " damage...");
-            col.GetComponent<EnemyController>().DamageEnemy(dam);
+            Debug.Log("ENEMY! Doing " + dam + " damage..."); 
+
+            if (col.name == "PeaStalk(Clone)")
+            { col.GetComponent<EnemyPeaController>().DamageEnemy(dam); }
+            else
+            { col.GetComponent<EnemyController>().DamageEnemy(dam); }
+
+
             isActive = false;
 
-            direction = (col.transform.position - transform.position).normalized;
-            col.gameObject.GetComponent<EnemyController>().PushEnemy(direction);
+            direction = (col.transform.position - GameObject.Find("Player").transform.position).normalized; 
+
+            if (col.name == "PeaStalk(Clone)")
+            { col.GetComponent<EnemyPeaController>().PushEnemy(direction); Debug.Log("Pushing Enemy!"); }
+            else
+            { col.GetComponent<EnemyController>().PushEnemy(direction); Debug.Log("Pushing Enemy!"); }
         }
     }
 
@@ -46,11 +56,20 @@ public class DamageEnemy : MonoBehaviour
         {
             int dam = damage * modifier;
             Debug.Log("ENEMY! Doing " + dam + " damage...");
-            col.GetComponent<EnemyController>().DamageEnemy(dam);
+
+            if (col.name == "PeaStalk(Clone)")
+            { col.GetComponent<EnemyPeaController>().DamageEnemy(dam); }
+            else
+            { col.GetComponent<EnemyController>().DamageEnemy(dam); }
+
             isActive = false;
 
             direction = (col.transform.position - transform.position).normalized;
-            col.gameObject.GetComponent<EnemyController>().PushEnemy(direction);
+
+            if (col.name == "PeaStalk(Clone)")
+            { col.gameObject.GetComponent<EnemyPeaController>().PushEnemy(direction); Debug.Log("Pushing Enemy!"); }
+            else
+            { col.gameObject.GetComponent<EnemyController>().PushEnemy(direction); Debug.Log("Pushing Enemy!"); }
         }
     }
 
